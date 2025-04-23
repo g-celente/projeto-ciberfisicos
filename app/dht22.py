@@ -1,5 +1,9 @@
-from machine import Pin
-import dht
+try:
+    from machine import Pin
+    import mock.dht
+except ImportError:
+    from app.machine import Pin
+    import mock.dht as dht
 
 class DHT22:
     def __init__(self, pin):

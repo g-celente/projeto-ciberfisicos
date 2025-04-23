@@ -1,8 +1,7 @@
 from app.dht22 import DHT22
 from app.servo import Servo 
-from machine import Pin 
+from app.machine import Pin 
 import time
-from iot_data_hub import IoTDataHub
 
 
 sensor = DHT22(15)

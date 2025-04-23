@@ -1,4 +1,7 @@
-from machine import Pin, PWM
+try:
+    from machine import Pin, PWM
+except ImportError:
+    from app.machine import Pin, PWM
 
 class Servo:
     def __init__(self, pin, angle = 0):
